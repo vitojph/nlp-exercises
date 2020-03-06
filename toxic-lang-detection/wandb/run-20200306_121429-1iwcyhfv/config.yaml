@@ -1,0 +1,149 @@
+wandb_version: 1
+
+_wandb:
+  desc: null
+  value:
+    cli_version: 0.8.29
+    is_jupyter_run: true
+    python_version: 3.7.6
+adam_epsilon:
+  desc: null
+  value: 1.0e-08
+best_model_dir:
+  desc: null
+  value: outputs/best_model
+cache_dir:
+  desc: null
+  value: cache_dir/
+do_lower_case:
+  desc: null
+  value: false
+early_stopping_delta:
+  desc: null
+  value: 0
+early_stopping_metric:
+  desc: null
+  value: eval_loss
+early_stopping_metric_minimize:
+  desc: null
+  value: true
+early_stopping_patience:
+  desc: null
+  value: 3
+eval_batch_size:
+  desc: null
+  value: 8
+evaluate_during_training:
+  desc: null
+  value: false
+evaluate_during_training_steps:
+  desc: null
+  value: 2000
+evaluate_during_training_verbose:
+  desc: null
+  value: false
+fp16:
+  desc: null
+  value: false
+fp16_opt_level:
+  desc: null
+  value: O1
+gradient_accumulation_steps:
+  desc: null
+  value: 1
+learning_rate:
+  desc: null
+  value: 4.0e-05
+logging_steps:
+  desc: null
+  value: 50
+manual_seed:
+  desc: null
+  value: null
+max_grad_norm:
+  desc: null
+  value: 1.0
+max_seq_length:
+  desc: null
+  value: 128
+model_name:
+  desc: null
+  value: roberta-base
+model_type:
+  desc: null
+  value: roberta
+n_gpu:
+  desc: null
+  value: 1
+no_cache:
+  desc: null
+  value: false
+num_train_epochs:
+  desc: null
+  value: 10
+output_dir:
+  desc: null
+  value: outputs/
+overwrite_output_dir:
+  desc: null
+  value: true
+process_count:
+  desc: null
+  value: 2
+reprocess_input_data:
+  desc: null
+  value: false
+save_eval_checkpoints:
+  desc: null
+  value: true
+save_model_every_epoch:
+  desc: null
+  value: true
+save_steps:
+  desc: null
+  value: 2000
+silent:
+  desc: null
+  value: false
+sliding_window:
+  desc: null
+  value: false
+stride:
+  desc: null
+  value: false
+tensorboard_dir:
+  desc: null
+  value: null
+threshold:
+  desc: null
+  value: 0.5
+tie_value:
+  desc: null
+  value: 1
+train_batch_size:
+  desc: null
+  value: 32
+use_cached_eval_features:
+  desc: null
+  value: false
+use_early_stopping:
+  desc: null
+  value: false
+use_multiprocessing:
+  desc: null
+  value: true
+wandb_kwargs:
+  desc: null
+  value: {}
+wandb_project:
+  desc: null
+  value: test-master
+warmup_ratio:
+  desc: null
+  value: 0.06
+warmup_steps:
+  desc: null
+  value: 2993
+weight_decay:
+  desc: null
+  value: 0
