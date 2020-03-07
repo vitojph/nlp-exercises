@@ -1,18 +1,28 @@
 import streamlit as st
 
 from simpletransformers.ner.ner_model import NERModel
+from simpletransformers.classification import ClassificationModel
 
-def load_model(
-    model_architecture: str, directory: str = "outputs/", use_cuda: bool = False, **kwargs
-):
+from typing import Any
+
+def load_model(task: str) -> Any:
     """Loads a pre-trained model"""
-    model = NERModel(model_architecture, directory, use_cuda=use_cuda, args=kwargs)
+    if task == "NER":
+        model = NERModel("bert", "ner/outputs/")
+    else:
+        model = ClassificationModel("distilroberta", "sentiment/outputs/")
     return model
 
-    
-st.markdown("# Ejemplo de Reconocimiento de entidades")
+st.markdown("# Ejemplo de app de con modelos de NLP")
 
-model = load_model("bert", directory="ner-model")
+task = None
+task = st.sidebar.selectbox(
+        '¿Qué tarea quieres probar?',
+        ('NER', 'Text Classification'))
+
+if task:
+    model = load_model(task)
+
 if model:
     st.markdown("Modelo cargado")
 
