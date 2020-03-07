@@ -13,7 +13,13 @@ def load_model(
 st.markdown("# Ejemplo de Reconocimiento de entidades")
 
 model = load_model("bert", directory="ner-model")
+if model:
+    st.markdown("Modelo cargado")
+
+text = None
 text = st.text_input("Escribe tu texto aquí")
 predictions, _raw_outputs = model.predict([text])
 
-st.write(predictions)
+if text:
+    st.markdown(f"Texto: *{text}*")
+    st.write(predictions)
